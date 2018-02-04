@@ -12,6 +12,10 @@ provisioner:
   require_chef_for_busser: false
   playbook:  site.yml
 
+verifier:
+  name: inspec
+  sudo: true
+
 platforms:
   - name: ubuntu-16.04
     driver_config:
@@ -21,3 +25,6 @@ platforms:
 
 suites:
   - name: default
+    verifier:
+      inspec_tests:
+        - test/integration/default
