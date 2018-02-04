@@ -1,0 +1,7 @@
+- hosts: all
+  become: true
+  become_user: root
+  become_method: sudo
+  roles: 
+    - { role: apache }
+
