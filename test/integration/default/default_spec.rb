@@ -12,3 +12,7 @@ describe http('http://localhost', enable_remote_worker: true) do
   its('status') { should cmp 200 }
   its('body') { should match /Configuration Management Camp/ }
 end
+
+describe package('telnetd') do
+  it { should_not be_installed }
+end
