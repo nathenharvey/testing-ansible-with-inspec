@@ -34,7 +34,7 @@
 - name: Push future default virtual host configuration
   copy: src=cfgmgmtcamp dest=/etc/apache2/sites-available/cfgmgmtcamp.conf mode=0640
 
-- name: Deploy the configuation managment camp website
+- name: Deploy the configuration management camp website
   git: repo=https://github.com/cfgmgmtcamp/cfgmgmtcamp.github.io.git dest=/var/www/cfgmgmtcamp depth=1
   tags: deploy
 
