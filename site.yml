@@ -4,4 +4,5 @@
   become_method: sudo
   roles: 
     - { role: apache }
+    - { role: dev-sec.os-hardening }
 
