@@ -28,3 +28,4 @@ suites:
     verifier:
       inspec_tests:
         - test/integration/default
+        - https://github.com/dev-sec/linux-baseline
