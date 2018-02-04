@@ -1,0 +1,23 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  hosts: test-kitchen
+  name: ansible_playbook
+  roles_path: roles
+  require_ansible_repo: true
+  ansible_verbose: true
+  ansible_version: latest
+  require_chef_for_busser: false
+  playbook:  site.yml
+
+platforms:
+  - name: ubuntu-16.04
+    driver_config:
+      network:
+      - ['forwarded_port', {guest: 80, host: 8080}]
+      - ['private_network', {ip: '192.168.33.11'}]
+
+suites:
+  - name: default
