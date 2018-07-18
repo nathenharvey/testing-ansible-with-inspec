@@ -20,6 +20,10 @@ Checkout all of the branches.
 
 `git checkout -b steps/06-linux-hardening origin/steps/06-linux-hardening`
 
+`git checkout master`
+
+# Demo
+
 `kitchen list`
 
 `kitchen create`
