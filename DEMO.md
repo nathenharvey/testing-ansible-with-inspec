@@ -68,6 +68,8 @@ inspec>   it { should be_listening }
 inspec> end
 ```
 
+`exit`
+
 `git checkout steps/02-inspec-verifier`
 
 `kitchen verify`
